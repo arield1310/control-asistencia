@@ -1,7 +1,11 @@
 FROM php:8.2-apache
 
-RUN docker-php-ext-install pdo pdo_pgsql pgsql
+# Instalar dependencias necesarias para PostgreSQL
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql pgsql
 
+# Copiar el proyecto
 COPY control-asistencia/ /var/www/html/
 
 EXPOSE 80
