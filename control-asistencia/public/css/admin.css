@@ -1,0 +1,454 @@
+/* ====== ESTILO GLOBAL ====== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eef2f7;
+    color: #2c3e50;
+}
+
+.admin-container {
+    display: flex;
+}
+
+/* ====== SIDEBAR ====== */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: linear-gradient(180deg, #0f1327, #151860, #262893);
+    color: #ecf0f1;
+    padding: 20px 15px;
+    position: fixed;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* .sidebar h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 20px;
+} */
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #dfe6e9;
+    text-decoration: none;
+    padding: 10px 13px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 14.5px;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    transform: translateX(6px);
+}
+
+/* ===== SIDEBAR HEADER ===== */
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.sidebar-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.sidebar-title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+/* ====== CONTENIDO ====== */
+.content {
+    margin-left: 260px;
+    /* porque sidebar es fixed */
+    padding: 40px;
+    width: calc(100% - 260px);
+    flex: 1;
+    /* 👈 CLAVE */
+    min-width: 0;
+    /* 👈 evita overflow raro */
+}
+
+/* ====== TARJETAS ====== */
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
+    transition: 0.3s ease;
+}
+
+.card {
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* ====== BOTONES ====== */
+button,
+.btn {
+    background: linear-gradient(90deg, #a71212, #8b0000);
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== TABLAS ====== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+table th {
+    background: linear-gradient(90deg, #203a43, #2c5364);
+    color: white;
+    padding: 14px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+table td {
+    padding: 13px;
+    border-bottom: 1px solid #ecf0f1;
+    font-size: 14px;
+}
+
+table tr:hover {
+    background-color: #f4f8fb;
+}
+
+/* ====== FORMULARIOS ====== */
+input,
+select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #dcdde1;
+    width: 100%;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+/* Espaciado general de formularios */
+form>input,
+form>select {
+    margin-bottom: 15px;
+}
+
+/* Registro masivo */
+.fila-alumno {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.fila-alumno input {
+    margin-bottom: 0;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2c5364;
+    box-shadow: 0 0 6px rgba(44, 83, 100, 0.3);
+}
+
+/* ====== ALERTAS ====== */
+.alerta-amarilla {
+    background-color: #fff8e1;
+    color: #b8860b;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.alerta-roja {
+    background-color: #fdecea;
+    color: #c0392b;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* ===== TITULOS ===== */
+.titulo-principal {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.bienvenida {
+    font-size: 15px;
+    color: #555;
+}
+
+/* ===== ACCIONES RÁPIDAS ===== */
+.acciones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+@media (max-width: 1100px) {
+    .acciones-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .acciones-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.accion-card {
+    width: 100%;
+    background: linear-gradient(135deg, #151860, #262893);
+    color: white;
+    text-decoration: none;
+    padding: 60px 40px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.accion-card i {
+    font-size: 36px;
+}
+
+.accion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== FORMULARIO GRID ===== */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.form-boton {
+    grid-column: 1 / -1;
+    text-align: right;
+}
+
+.fila-alumno {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.fila-alumno input {
+    width: 100%;
+}
+
+/* ===== FLOATING INPUT ===== */
+
+.floating-group {
+    position: relative;
+    width: 100%;
+}
+
+.floating-group input {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 14px 10px 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #dcdde1;
+    font-size: 14px;
+    background: transparent;
+}
+
+.floating-group label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: #5e5d5d;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    background: white;
+    padding: 0 5px;
+}
+
+/* Cuando el input tiene foco */
+.floating-group input:focus+label,
+.floating-group input:not(:placeholder-shown)+label {
+    top: -8px;
+    font-size: 11px;
+    color: #0048a0;
+    font-weight: 500;
+}
+
+/* Efecto focus */
+.floating-group input:focus {
+    border-color: #0048a0;
+    box-shadow: 0 0 6px rgba(38, 105, 147, 0.3);
+}
+
+/* SELECT FLOATING */
+
+.floating-group select {
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 14px 10px 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #dcdde1;
+    font-size: 14px;
+    background: white;
+    appearance: none;
+    cursor: pointer;
+}
+
+.floating-group select:focus {
+    border-color: #0048a0;
+    box-shadow: 0 0 6px rgba(38, 40, 147, 0.3);
+}
+
+/* Cuando tiene valor seleccionado */
+.floating-group select:valid+label {
+    top: -8px;
+    font-size: 11px;
+    color: #0048a0;
+    font-weight: 500;
+}
+
+/* Cuando tiene foco */
+.floating-group select:focus+label {
+    top: -8px;
+    font-size: 11px;
+    color: #0048a0;
+    font-weight: 500;
+}
+
+input[type="radio"] {
+    transform: scale(1.2);
+    accent-color: #262893;
+    cursor: pointer;
+}
+
+/* ===== LOGIN ===== */
+
+.login-body {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-wrapper {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.login-card {
+    background: white;
+    border: #151860 2px solid;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-logo {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+.login-header h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.login-header p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Botón login */
+
+.btn-login {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #151860, #262893);
+    color: white;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 26px;
+}

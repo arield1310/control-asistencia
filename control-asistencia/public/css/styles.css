@@ -1,0 +1,185 @@
+/* ===== ESTILO GLOBAL ===== */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ===== CONTENEDOR LOGIN ===== */
+.login-container {
+    background: #ffffff;
+    padding: 45px 40px;
+    border-radius: 20px;
+    width: 380px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #243b55;
+    letter-spacing: 1px;
+}
+
+/* ===== INPUTS ===== */
+.login-container input {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #dcdde1;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.login-container input:focus {
+    outline: none;
+    border-color: #243b55;
+    box-shadow: 0 0 8px rgba(36, 59, 85, 0.3);
+}
+
+/* ===== BOTÓN LOGIN ===== */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #243b55, #141e30);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== DASHBOARD SIMPLE (si se usa) ===== */
+.dashboard-container {
+    background: white;
+    padding: 45px;
+    border-radius: 18px;
+    width: 420px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-container select,
+.dashboard-container button {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* ===== TABLA ASISTENCIA ===== */
+.tabla-asistencia {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tabla-asistencia th,
+.tabla-asistencia td {
+    padding: 12px;
+    text-align: left;
+}
+
+.tabla-asistencia th {
+    background: linear-gradient(90deg, #243b55, #141e30);
+    color: white;
+    font-weight: 500;
+}
+
+.tabla-asistencia tr:nth-child(even) {
+    background-color: #f4f6f9;
+}
+
+/* ===== ENLACES ===== */
+a {
+    text-decoration: none;
+    color: #243b55;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #141e30;
+}
+
+/* ===== BOTONES GENERALES ===== */
+button {
+    background: linear-gradient(90deg, #243b55, #141e30);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== MENSAJES ===== */
+.mensaje-error,
+.error {
+    color: #c0392b;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.mensaje-exito {
+    color: #27ae60;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* ===== ALERTAS ===== */
+.alerta-amarilla {
+    background-color: #fff8e1;
+    color: #b8860b;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.alerta-roja {
+    background-color: #fdecea;
+    color: #c0392b;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* ===== ANIMACIÓN ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
