@@ -12,6 +12,8 @@
     <a href="/views/alumnos/crear.php"><i class="bi bi-person-fill-add"></i> Registrar Alumno</a>
     <a href="/views/alumnos/listado.php"><i class="bi bi-people-fill"></i> Listado</a>
     <a href="/views/reportes/reporte_mensual.php"><i class="bi bi-clipboard-data-fill"></i> Reporte Mensual</a>
+    <a href="/views/reportes/reporte_anual.php"><i class="bi bi-person-badge-fill"></i> Reporte Anual de Alumno</a>
     <a href="/logout.php"><i class="bi bi-box-arrow-left"></i> Cerrar Sesión</a>
 
 </div>
+
