@@ -17,9 +17,3 @@
 
 
 <div class="admin-container">
-
-<script>
-function toggleMenu() {
-    document.querySelector(".sidebar").classList.toggle("active");
-}
-</script>
