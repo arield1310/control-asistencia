@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <div class="content">
 <div class="card">
 
-<h2>Reporte Anual por NIE</h2>
+<h2>Reporte Anual por Alumno</h2>
 
 <form method="POST">
 
@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <div class="card" style="margin-top:20px;">
 
-        <h3><?= $alumno["apellido"] . " " . $alumno["nombre"] ?></h3>
+        <h3><?= $alumno["apellido"] . ", " . $alumno["nombre"] ?></h3>
         <p><strong>NIE:</strong> <?= $alumno["nie"] ?></p>
         <p><strong>Sección:</strong> 
             <?= $alumno["anio_nombre"] ?> - 
