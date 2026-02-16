@@ -22,7 +22,7 @@ $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
     <!-- Tarjeta Bienvenida -->
     <div class="card">
         <h2 class="titulo-principal">
-            <i class="bi bi-speedometer2"></i> Panel Principal
+            <i class="bi bi-speedometer2"></i> Sistema de Control de Asistencia y Secciones
         </h2>
         <p class="bienvenida">
             Bienvenido, <strong><?php echo $_SESSION["usuario"]; ?></strong>
@@ -105,5 +105,6 @@ $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
 </div>
+
 
 <?php include "views/layout/footer.php"; ?>
