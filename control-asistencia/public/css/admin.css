@@ -548,3 +548,22 @@ h2 {
     }
 
 }
+
+.menu-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #151860;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    z-index: 1100;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+}
