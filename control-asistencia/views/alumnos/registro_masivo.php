@@ -15,6 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $anio_id = $_POST["anio_id"];
     $modalidad_id = $_POST["modalidad_id"];
 
+    $nies = $_POST["nie"];
     $nombres = $_POST["nombre"];
     $apellidos = $_POST["apellido"];
 
@@ -23,11 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (!empty($nombres[$i]) && !empty($apellidos[$i])) {
 
             $stmt = $pdo->prepare("
-                INSERT INTO alumnos (apellido, nombre, anio_id, modalidad_id, seccion_id)
-                VALUES (?, ?, ?, ?, ?)
+                INSERT INTO alumnos (nie, apellido, nombre, anio_id, modalidad_id, seccion_id)
+                VALUES (?, ?, ?, ?, ?, ?)
             ");
 
             $stmt->execute([
+                $nies[$i],
                 $apellidos[$i],
                 $nombres[$i],
                 $anio_id,
@@ -107,6 +109,11 @@ $secciones = $pdo->query("SELECT * FROM secciones ORDER BY nombre")->fetchAll();
     <div class="fila-alumno">
 
         <div class="floating-group">
+            <input type="text" name="nie[]" placeholder=" " required>
+            <label>NIE</label>
+        </div>
+        
+        <div class="floating-group">
             <input type="text" name="apellido[]" placeholder=" " required>
             <label>Apellido</label>
         </div>
@@ -141,6 +148,11 @@ document.getElementById("agregarAlumno").addEventListener("click", function() {
 
     nuevaFila.innerHTML = `
         <div class="floating-group">
+            <input type="text" name="nie[]" placeholder=" " required>
+            <label>NIE</label>
+        </div>
+
+        <div class="floating-group">
             <input type="text" name="apellido[]" placeholder=" " required>
             <label>Apellido</label>
         </div>
@@ -156,3 +168,4 @@ document.getElementById("agregarAlumno").addEventListener("click", function() {
 </script>
 
 <?php include "../layout/footer.php"; ?>
+
