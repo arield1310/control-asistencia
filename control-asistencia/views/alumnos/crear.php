@@ -34,6 +34,11 @@ $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
 
     <form method="POST" action="../../controllers/guardar_alumno.php">
 
+        <div class="floating-group">
+            <input type="text" name="nie" placeholder=" " required>
+            <label>NIE</label>
+        </div>
+        
         <label>Nombre:</label>
         <input type="text" name="nombre" required>
 
@@ -78,3 +83,4 @@ $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
 </div>
 
 <?php include "../layout/footer.php"; ?>
+
