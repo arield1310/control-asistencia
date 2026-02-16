@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Login - Instituto Nacional de El Congo</title>
-    <link rel="stylesheet" href="public/css/admin.css">
+    <link rel="stylesheet" href="/public/css/admin.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="login-body">
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="login-card">
 
         <div class="login-header">
-            <img src="/control-asistencia/img/Logo INCO.png" class="login-logo">
+            <img src="/img/Logo INCO.png" class="login-logo">
             <h2>Instituto Nacional de El Congo</h2>
             <p>Control de Asistencia</p>
         </div>
@@ -69,3 +69,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+
