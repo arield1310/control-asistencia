@@ -454,3 +454,97 @@ h2 {
     font-size: 26px;
 
 }
+
+/* ===============================
+   TABLET
+=================================*/
+@media (max-width: 1024px) {
+
+    .sidebar {
+        width: 220px;
+        padding: 20px 10px;
+    }
+
+    .content {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+        padding: 30px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+}
+
+/* ===============================
+   CELULAR
+=================================*/
+@media (max-width: 768px) {
+
+    .admin-container {
+        flex-direction: column;
+    }
+
+    /* Sidebar oculto */
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        width: 260px;
+        height: 100vh;
+        transition: 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Clase para mostrar sidebar */
+    .sidebar.active {
+        left: 0;
+    }
+
+    /* Contenido ocupa todo */
+    .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    /* Tarjetas */
+    .card {
+        padding: 20px;
+        border-radius: 14px;
+    }
+
+    /* Tablas con scroll horizontal */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Formularios en una columna */
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fila-alumno {
+        grid-template-columns: 1fr;
+    }
+
+    /* Botones más grandes para touch */
+    button,
+    .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+}
