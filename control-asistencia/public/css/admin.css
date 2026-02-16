@@ -25,6 +25,7 @@ body {
 .sidebar {
     width: 260px;
     height: 100vh;
+    overflow-y: auto;
     background: linear-gradient(180deg, #0f1327, #151860, #262893);
     color: #ecf0f1;
     padding: 20px 15px;
@@ -451,4 +452,5 @@ h2 {
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 26px;
+
 }
