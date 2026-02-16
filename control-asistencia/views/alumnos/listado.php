@@ -96,6 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <table class="tabla-asistencia">
             <tr>
+                <th>NIE</th>
                 <th>Apellido</th>
                 <th>Nombre</th>
                 <th>Estado</th>
@@ -104,6 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             <?php foreach ($alumnos as $alumno): ?>
                 <tr>
+                    <td><?= $alumno["nie"] ?? "—" ?></td>
                     <td><?= $alumno["apellido"] ?></td>
                     <td><?= $alumno["nombre"] ?></td>
                     <td><?= $alumno["activo"] ? "Activo" : "Inactivo" ?></td>
@@ -127,5 +129,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 </div>
 </div>
+
 
 <?php include "../layout/footer.php"; ?>
