@@ -24,12 +24,16 @@ body {
 /* ====== SIDEBAR ====== */
 .sidebar {
     width: 260px;
-    min-height: 100vh;
+    height: 100vh;
     overflow-y: auto;
     background: linear-gradient(180deg, #0f1327, #151860, #262893);
     color: #ecf0f1;
     padding: 20px 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
 }
 
 /* .sidebar h2 {
@@ -84,10 +88,13 @@ body {
 /* ====== CONTENIDO ====== */
 .content {
     margin-left: 260px;
+    /* porque sidebar es fixed */
     padding: 40px;
     width: calc(100% - 260px);
     flex: 1;
+    /* 👈 CLAVE */
     min-width: 0;
+    /* 👈 evita overflow raro */
 }
 
 /* ====== TARJETAS ====== */
@@ -488,12 +495,7 @@ h2 {
 
     /* Sidebar oculto */
     .sidebar {
-        position: fixed;
-        top: 0;
         left: -260px;
-        height: 100vh;
-        transition: 0.3s ease;
-        z-index: 2000;
     }
 
     .sidebar.active {
@@ -560,5 +562,3 @@ h2 {
         display: block;
     }
 }
-
-
