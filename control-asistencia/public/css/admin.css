@@ -33,7 +33,7 @@ body {
     left: 0;
     top: 0;
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
+    transition: left 0.3s ease;
 }
 
 /* .sidebar h2 {
@@ -561,4 +561,21 @@ h2 {
     .menu-toggle {
         display: block;
     }
+}
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        left: -260px !important;
+    }
+
+    .sidebar.active {
+        left: 0 !important;
+    }
+
+    .content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
 }
