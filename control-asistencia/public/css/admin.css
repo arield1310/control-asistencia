@@ -32,7 +32,7 @@ body {
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
     position: fixed;
     left: 0;
-    top: 0;
+    top: 60px;
     z-index: 1200;
     transition: left 0.3s ease;
 }
@@ -568,7 +568,7 @@ h2 {
 }
 
 .brand img {
-    height: 35px;
+    height: 45px;
 }
 
 /* Ajustar contenedor principal */
@@ -610,6 +610,7 @@ h2 {
     }
 
 }
+
 
 
 
