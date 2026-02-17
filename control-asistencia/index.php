@@ -11,8 +11,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user && $password == $user["password"]) {
+
+        $_SESSION["usuario_id"] = $user["id"];
         $_SESSION["usuario"] = $user["nombre"];
-        header("Location: dashboard.php");
+        $_SESSION["rol"] = $user["rol"];
+
+        // Redirigir según rol
+        if ($user["rol"] === "admin") {
+            header("Location: dashboard_admin.php");
+        } else {
+            header("Location: dashboard_maestro.php");
+        }
+
         exit;
     } else {
         $error = "Credenciales incorrectas";
@@ -69,4 +79,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+
 
