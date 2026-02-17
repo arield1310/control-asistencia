@@ -117,7 +117,7 @@ body {
 }
 
 /* ====== BOTONES ====== */
-button,
+button:not(.menu-toggle),
 .btn {
     background: linear-gradient(90deg, #a71212, #8b0000);
     color: #ffffff;
@@ -552,6 +552,8 @@ h2 {
     color: white;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
     padding: 0 15px;
     position: fixed;
     top: 0;
@@ -576,20 +578,19 @@ h2 {
     margin-top: 60px;
 }
 
+
 .menu-toggle {
     display: none;
-    position: fixed;
+    background: transparent;
     color: white;
     border: none;
-    padding: 8px 12px;
-    border-radius: 6px;
-    z-index: 1300;
+    font-size: 1.6rem;
+    padding: 0;
 }
 
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
-        margin-right: 15px;
     }
 }
 
@@ -610,6 +611,7 @@ h2 {
     }
 
 }
+
 
 
 
