@@ -582,10 +582,12 @@ h2 {
 .menu-toggle {
     display: none;
     background: transparent;
-    color: white;
     border: none;
+    color: white;
     font-size: 1.6rem;
-    padding: 0;
+    padding: 6px 8px;
+    width: auto !important;
+    height: auto;
 }
 
 @media (max-width: 768px) {
@@ -611,6 +613,7 @@ h2 {
     }
 
 }
+
 
 
 
