@@ -579,7 +579,6 @@ h2 {
 .menu-toggle {
     display: none;
     position: fixed;
-    background: #151860;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -611,5 +610,6 @@ h2 {
     }
 
 }
+
 
 
