@@ -29,10 +29,11 @@ body {
     background: linear-gradient(180deg, #0f1327, #151860, #262893);
     color: #ecf0f1;
     padding: 20px 15px;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
     position: fixed;
     left: 0;
     top: 0;
-    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 1200;
     transition: left 0.3s ease;
 }
 
@@ -554,7 +555,7 @@ h2 {
     border: none;
     padding: 8px 12px;
     border-radius: 6px;
-    z-index: 1100;
+    z-index: 1300;
 }
 
 @media (max-width: 768px) {
@@ -580,3 +581,4 @@ h2 {
     }
 
 }
+
