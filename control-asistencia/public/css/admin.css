@@ -563,19 +563,20 @@ h2 {
     }
 }
 
+/* ===== MODO MOVIL ===== */
 @media (max-width: 768px) {
 
     .sidebar {
-        left: -260px !important;
+        left: -260px;
     }
 
     .sidebar.active {
-        left: 0 !important;
+        left: 0;
     }
 
     .content {
-        margin-left: 0 !important;
-        width: 100% !important;
+        margin-left: 0;
+        width: 100%;
     }
 
 }
