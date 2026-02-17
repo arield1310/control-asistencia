@@ -545,11 +545,40 @@ h2 {
 
 }
 
+/* ===== HEADER SUPERIOR ===== */
+.topbar {
+    height: 60px;
+    background: #151860;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1400;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.brand img {
+    height: 35px;
+}
+
+/* Ajustar contenedor principal */
+.admin-container {
+    margin-top: 60px;
+}
+
 .menu-toggle {
     display: none;
     position: fixed;
-    top: 15px;
-    left: 15px;
     background: #151860;
     color: white;
     border: none;
@@ -561,6 +590,7 @@ h2 {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+        margin-right: 15px;
     }
 }
 
@@ -581,4 +611,5 @@ h2 {
     }
 
 }
+
 
