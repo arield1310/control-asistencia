@@ -30,7 +30,10 @@ body {
     color: #ecf0f1;
     padding: 20px 15px;
     position: fixed;
+    left: 0;
+    top: 0;
     box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
 }
 
 /* .sidebar h2 {
@@ -492,21 +495,13 @@ h2 {
 
     /* Sidebar oculto */
     .sidebar {
-        position: fixed;
         left: -260px;
-        top: 0;
-        width: 260px;
-        height: 100vh;
-        transition: 0.3s ease;
-        z-index: 1000;
     }
 
-    /* Clase para mostrar sidebar */
     .sidebar.active {
         left: 0;
     }
 
-    /* Contenido ocupa todo */
     .content {
         margin-left: 0;
         width: 100%;
@@ -567,3 +562,4 @@ h2 {
         display: block;
     }
 }
+
