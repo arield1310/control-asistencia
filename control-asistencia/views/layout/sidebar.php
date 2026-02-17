@@ -1,10 +1,4 @@
 <div class="sidebar">
-    <div class="sidebar-header">
-        <img src="/img/Logo INCO.png" alt="Logo Instituto" class="sidebar-logo">
-        <h2 class="sidebar-title">
-            Instituto Nacional de <br> El Congo
-        </h2>
-    </div>
 
     <a href="/dashboard.php"><i class="bi bi-house-door-fill"></i> Principal</a>
     <a href="/views/secciones/crear.php"><i class="bi bi-plus-circle-fill"></i> Crear Sección</a>
@@ -16,4 +10,5 @@
     <a href="/logout.php"><i class="bi bi-box-arrow-left"></i> Cerrar Sesión</a>
 
 </div>
+
 
