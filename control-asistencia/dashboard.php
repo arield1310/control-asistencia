@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-if (!isset($_SESSION["usuario"])) {
+session_start();
+
+if (!isset($_SESSION["usuario_id"])) {
     header("Location: index.php");
     exit;
 }
@@ -34,11 +36,6 @@ $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
         <h3 class="subtitulo">Accesos Rápidos</h3>
 
         <div class="acciones-grid">
-            <a href="views/alumnos/crear.php" class="accion-card">
-                <i class="bi bi-person-plus-fill"></i>
-                <span>Registrar Alumno</span>
-            </a>
-
             <a href="views/alumnos/listado.php" class="accion-card">
                 <i class="bi bi-people-fill"></i>
                 <span>Ver Alumnos</span>
@@ -47,6 +44,11 @@ $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
             <a href="views/reportes/reporte_mensual.php" class="accion-card">
                 <i class="bi bi-clipboard-data-fill"></i>
                 <span>Reporte Mensual</span>
+            </a>
+
+            <a href="/views/reportes/reporte anual.php" class="accion-card">
+                <i class="bi bi-person-badge-fill"></i>
+                <span>Reporte Anual</span>
             </a>
         </div>
     </div>
@@ -108,3 +110,4 @@ $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
 
 
 <?php include "views/layout/footer.php"; ?>
+
