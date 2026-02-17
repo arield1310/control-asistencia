@@ -14,9 +14,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button class="menu-toggle" onclick="toggleMenu()"><i class="bi bi-list"></i></button>
-
+<header class="topbar">
+    <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="bi bi-list"></i>
+    </button>
+    
+    <div class="brand">
+        <img src="/img/Logo INCO.png" alt="Logo">
+        <span>Instituto Nacional de El Congo</span>
+    </div>
+</header>
 
 <div class="admin-container">
-
 
