@@ -55,13 +55,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="floating-group icon-group">
                 <input type="text" name="username" placeholder=" " required>
-                <label><i class="bi bi-person"></i>Usuario</label>
+                <label><i class="bi bi-person"></i> Usuario</label>
             </div>
 
             <div class="floating-group icon-group">
 
                 <input type="password" id="password" name="password" placeholder=" " required>
-                <label><i class="bi bi-key"></i>Contraseña</label>
+                <label><i class="bi bi-key"></i> Contraseña</label>
 
                 <i class="bi bi-eye-slash toggle-password" id="togglePassword"></i>
             </div>
@@ -89,6 +89,7 @@ toggle.addEventListener("click", function() {
 </script>
 </body>
 </html>
+
 
 
 
