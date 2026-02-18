@@ -1,5 +1,4 @@
 <?php
-<?php
 session_start();
 
 if (!isset($_SESSION["usuario_id"])) {
@@ -90,5 +89,6 @@ $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
 </div>
 
 <?php include "../layout/footer.php"; ?>
+
 
 
