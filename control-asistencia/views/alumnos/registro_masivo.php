@@ -1,11 +1,17 @@
 <?php
 session_start();
-require_once "../../config/database.php";
 
-if (!isset($_SESSION["usuario"])) {
+if (!isset($_SESSION["usuario_id"])) {
     header("Location: ../../index.php");
     exit;
 }
+
+if ($_SESSION["rol"] !== "admin") {
+    header("Location: ../../dashboard.php");
+    exit;
+}
+
+require_once "../../config/database.php";
 
 $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
 
@@ -46,7 +52,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 ?>
 
 <?php
-require_once "../../config/database.php";
 
 $anios = $pdo->query("SELECT * FROM anios ORDER BY nombre")->fetchAll();
 $modalidades = $pdo->query("SELECT * FROM modalidades ORDER BY nombre")->fetchAll();
@@ -168,4 +173,5 @@ document.getElementById("agregarAlumno").addEventListener("click", function() {
 </script>
 
 <?php include "../layout/footer.php"; ?>
+
 
