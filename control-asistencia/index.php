@@ -59,7 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <div class="floating-group">
-                <input type="password" name="password" placeholder=" " required>
+                <input type="password" id="password" name="password" placeholder=" " required>
+                <i class="bi bi-eye-slash toggle-password" id="togglePassword"></i>
                 <label><i class="bi bi-key"></i> Contraseña</label>
             </div>
 
@@ -75,6 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+
 
 
 
