@@ -54,12 +54,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="floating-group">
                 <input type="text" name="username" placeholder=" " required>
-                <label>Usuario</label>
+                <label><i class="bi bi-person"></i> Usuario</label>
             </div>
 
             <div class="floating-group">
                 <input type="password" name="password" placeholder=" " required>
-                <label>Contraseña</label>
+                <label><i class="bi bi-key"></i> Contraseña</label>
             </div>
 
             <button type="submit" class="btn-login">
@@ -74,6 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+
 
 
 
