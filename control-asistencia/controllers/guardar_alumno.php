@@ -1,8 +1,7 @@
 <?php
 session_start();
-require_once "../config/database.php";
 
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+if (!isset($_SESSION["usuario_id"]) || $_SESSION["rol"] !== "admin") {
     header("Location: ../dashboard.php");
     exit;
 }
@@ -30,4 +29,5 @@ $stmt->execute([
 echo "Alumno registrado correctamente.";
 echo "<br><a href='../views/alumnos/crear.php'>Registrar otro</a>";
 echo "<br><a href='../dashboard.php'>Ir al Dashboard</a>";
+
 
