@@ -61,7 +61,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="floating-group">
                 <input type="password" id="password" name="password" placeholder=" " required>
                 <i class="bi bi-eye-slash toggle-password" id="togglePassword"></i>
-                <input type="password" name="password" placeholder=" " required>
                 <label><i class="bi bi-key"></i> Contraseña</label>
             </div>
 
@@ -75,8 +74,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </div>
 
+<script>
+const toggle = document.getElementById("togglePassword");
+const password = document.getElementById("password");
+
+toggle.addEventListener("click", function() {
+    const type = password.getAttribute("type") === "password" ? "text" : "password";
+    password.setAttribute("type", type);
+    this.classList.toggle("bi-eye");
+    this.classList.toggle("bi-eye-slash");
+});
+</script>
 </body>
 </html>
+
 
 
 
