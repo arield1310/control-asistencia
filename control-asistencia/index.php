@@ -16,13 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["usuario"] = $user["nombre"];
         $_SESSION["rol"] = $user["rol"];
 
-        // Redirigir según rol
-        if ($user["rol"] === "admin") {
-            header("Location: dashboard_admin.php");
-        } else {
-            header("Location: dashboard_maestro.php");
-        }
-
+        // Redirigir al mismo dashboard para ambos roles
+    header("Location: dashboard.php");
         exit;
     } else {
         $error = "Credenciales incorrectas";
@@ -79,5 +74,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 </body>
 </html>
+
 
 
