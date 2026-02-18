@@ -524,6 +524,14 @@ input[type="radio"] {
     text-align: center;
 }
 
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+}
 
 h2 {
     margin-bottom: 20px;
@@ -686,6 +694,7 @@ h2 {
     }
 
 }
+
 
 
 
