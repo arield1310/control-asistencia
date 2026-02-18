@@ -534,11 +534,6 @@ input[type="radio"] {
     padding-left: 40px;
 }
 
-/* Ajuste del label */
-.icon-group label {
-    left: 40px;
-}
-
 /* Icono mostrar contraseña */
 .toggle-password {
     position: absolute;
@@ -711,6 +706,7 @@ h2 {
     }
 
 }
+
 
 
 
