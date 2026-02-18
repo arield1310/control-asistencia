@@ -388,43 +388,63 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-/* ===== LOGIN ===== */
+/* ====== LOGIN MODERNO ====== */
 
 .login-body {
-    background: #fff;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #151860, #262893, #3f43c4);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
+/* Contenedor */
 .login-wrapper {
     width: 100%;
-    max-width: 500px;
+    max-width: 420px;
     padding: 20px;
 }
 
+/* Tarjeta */
 .login-card {
-    background: white;
-    border: #151860 2px solid;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 45px 35px;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    animation: fadeIn 0.6s ease-in-out;
 }
 
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
 .login-header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .login-logo {
-    width: 90px;
+    width: 85px;
     margin-bottom: 15px;
 }
 
 .login-header h2 {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 600;
     margin-bottom: 5px;
+    color: #151860;
 }
 
 .login-header p {
@@ -432,25 +452,78 @@ input[type="radio"] {
     color: #666;
 }
 
-/* Botón login */
+/* Inputs */
+.floating-group {
+    position: relative;
+    margin-bottom: 25px;
+}
 
+.floating-group input {
+    width: 100%;
+    padding: 14px 12px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s ease;
+    outline: none;
+}
+
+.floating-group input:focus {
+    border-color: #262893;
+    box-shadow: 0 0 0 3px rgba(38, 40, 147, 0.15);
+}
+
+.floating-group label {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    font-size: 13px;
+    color: #777;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+.floating-group input:focus + label,
+.floating-group input:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 10px;
+    font-size: 11px;
+    background: white;
+    padding: 0 5px;
+    color: #262893;
+}
+
+/* Botón */
 .btn-login {
     width: 100%;
-    margin-top: 15px;
-    padding: 12px;
-    border-radius: 10px;
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 12px;
     background: linear-gradient(90deg, #151860, #262893);
     color: white;
     border: none;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 14px;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 .btn-login:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
+
+/* Error */
+.alerta-roja {
+    background: #ffe6e6;
+    color: #b30000;
+    padding: 10px 12px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+
 
 h2 {
     margin-bottom: 20px;
@@ -613,6 +686,7 @@ h2 {
     }
 
 }
+
 
 
 
