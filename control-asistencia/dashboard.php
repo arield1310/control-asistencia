@@ -46,7 +46,7 @@ $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
                 <span>Reporte Mensual</span>
             </a>
 
-            <a href="/views/reportes/reporte anual.php" class="accion-card">
+            <a href="/views/reportes/reporte_anual.php" class="accion-card">
                 <i class="bi bi-person-badge-fill"></i>
                 <span>Reporte Anual</span>
             </a>
@@ -110,4 +110,5 @@ $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
 
 
 <?php include "views/layout/footer.php"; ?>
+
 
