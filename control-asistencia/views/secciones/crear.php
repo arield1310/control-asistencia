@@ -54,21 +54,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <label>Nombre de Sección (Ej: A, B, C):</label>
     <input type="text" name="nombre" required>
 
-    <label>Año:</label>
-    <select name="anio_id" required>
-        <option value="">Seleccione</option>
-        <?php foreach ($anios as $a): ?>
-            <option value="<?= $a['id'] ?>"><?= $a['nombre'] ?></option>
-        <?php endforeach; ?>
-    </select>
+    <div class="floating-group">
+        <select name="anio_id" required>
+            <option value="" disabled selected hidden></option>
+            <?php foreach ($anios as $anio): ?>
+                <option value="<?= $anio['id'] ?>">
+                    <?= $anio['nombre'] ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        <label>Año</label>
+    </div>
 
-    <label>Modalidad:</label>
-    <select name="modalidad_id" required>
-        <option value="">Seleccione</option>
-        <?php foreach ($modalidades as $m): ?>
-            <option value="<?= $m['id'] ?>"><?= $m['nombre'] ?></option>
-        <?php endforeach; ?>
-    </select>
+    <div class="floating-group">
+        <select name="modalidad_id" required>
+            <option value="" disabled selected hidden></option>
+            <?php foreach ($modalidades as $modalidad): ?>
+                <option value="<?= $modalidad['id'] ?>">
+                    <?= $modalidad['nombre'] ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        <label>Modalidad</label>
+    </div>
 
     <br><br>
     <button type="submit">Crear Sección</button>
@@ -79,4 +87,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </div>
 
 <?php include "../layout/footer.php"; ?>
+
 
