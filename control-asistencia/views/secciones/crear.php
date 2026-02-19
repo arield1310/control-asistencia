@@ -50,9 +50,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <?php endif; ?>
 
 <form method="POST">
-
-    <label>Nombre de Sección (Ej: A, B, C):</label>
-    <input type="text" name="nombre" required>
+    <div class="floating-group">
+        <input type="text" name="nombre" placeholder=" " required>
+        <label>Nombre de Sección (Ej: A, B, C):</label>
+    </div>
 
     <div class="floating-group">
         <select name="anio_id" required>
@@ -87,5 +88,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </div>
 
 <?php include "../layout/footer.php"; ?>
+
 
 
