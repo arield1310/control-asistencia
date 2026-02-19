@@ -44,42 +44,52 @@ $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
             <input type="text" name="nie" placeholder=" " required>
             <label>NIE</label>
         </div>
-        
-        <label>Nombre:</label>
-        <input type="text" name="nombre" required>
 
-        <label>Apellido:</label>
-        <input type="text" name="apellido" required>
+        <div class="floating-group">
+            <input type="text" name="apellido[]" placeholder=" " required>
+            <label>Apellido</label>
+        </div>
 
-        <label>Año:</label>
-        <select name="anio_id" required>
-            <option value="">Seleccione</option>
-            <?php foreach ($anios as $anio): ?>
-                <option value="<?= $anio['id'] ?>">
-                    <?= $anio['nombre'] ?>
-                </option>
-            <?php endforeach; ?>
-        </select>
+        <div class="floating-group">
+            <input type="text" name="nombre[]" placeholder=" " required>
+            <label>Nombre</label>
+        </div>
 
-        <label>Modalidad:</label>
-        <select name="modalidad_id" required>
-            <option value="">Seleccione</option>
-            <?php foreach ($modalidades as $modalidad): ?>
-                <option value="<?= $modalidad['id'] ?>">
-                    <?= $modalidad['nombre'] ?>
-                </option>
-            <?php endforeach; ?>
-        </select>
+        <div class="floating-group">
+            <select name="anio_id" required>
+                <option value="" disabled selected hidden></option>
+                <?php foreach ($anios as $anio): ?>
+                    <option value="<?= $anio['id'] ?>">
+                        <?= $anio['nombre'] ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+            <label>Año</label>
+        </div>
 
-        <label>Sección:</label>
-        <select name="seccion_id" required>
-            <option value="">Seleccione</option>
-            <?php foreach ($secciones as $seccion): ?>
-                <option value="<?= $seccion['id'] ?>">
-                    <?= $seccion['nombre'] ?>
-                </option>
-            <?php endforeach; ?>
-        </select>
+        <div class="floating-group">
+            <select name="modalidad_id" required>
+                <option value="" disabled selected hidden></option>
+                <?php foreach ($modalidades as $modalidad): ?>
+                    <option value="<?= $modalidad['id'] ?>">
+                        <?= $modalidad['nombre'] ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+            <label>Modalidad</label>
+        </div>
+
+        <div class="floating-group">
+            <select name="seccion_id" required>
+                <option value="" disabled selected hidden></option>
+                <?php foreach ($secciones as $s): ?>
+                    <option value="<?= $s['id'] ?>">
+                        <?= $s['nombre'] ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+            <label>Sección</label>
+        </div>
 
         <br><br>
         <button type="submit">Guardar Alumno</button>
@@ -89,6 +99,7 @@ $secciones = $pdo->query("SELECT * FROM secciones")->fetchAll(PDO::FETCH_ASSOC);
 </div>
 
 <?php include "../layout/footer.php"; ?>
+
 
 
 
